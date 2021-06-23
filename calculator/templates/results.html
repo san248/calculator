@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+ 
+<body>
+    Past Calculations
+<a href= "{{link}} "> Back </a>
+ 
+  <table style="width:100%">
+      <tr>
+          <th>First Number</th>
+          <th>Operation</th>
+          <th>Second Number</th>
+          <th>Result</th>
+      </tr>
+      {% for expression in past %}
+      <tr>
+          <td>{{expression.num_one}}</td>
+          <td>{{expression.operator}}</td>
+          <td>{{expression.num_two}}</td>
+          <td>{{expression.result}}</td>
+      </tr>
+      {% endfor %}
+  </table>
+</body>
+{% endblock %}

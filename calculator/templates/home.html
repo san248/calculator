@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+ 
+<body>
+  <form method="POST">
+      {% csrf_token %} {{form.num_one}} {{form.operator}} {{form.num_two}}
+ 
+      <button name="button" type="submit"><i class="fas fa-equals"></i></button>
+  </form>
+</body>
+{% endblock %}
